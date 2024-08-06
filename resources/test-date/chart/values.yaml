@@ -1,0 +1,19 @@
+gitops-runtime:
+  global:
+    codefresh:
+      accountId: 61ee613ed0a01649469afba5
+      url: https://g.codefresh.io
+      userToken:
+        secretKeyRef:
+          name: codefresh-user-token
+          key: token
+    runtime:
+      ingress:
+        className: nginx-internal
+        enabled: true
+        hosts:
+          - alina-hermes.rnd-sandbox.cf-infra.com
+        protocol: https
+      name: test-date
+  installer:
+    skipValidation: true
