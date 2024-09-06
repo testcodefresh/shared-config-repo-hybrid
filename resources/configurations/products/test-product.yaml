@@ -1,0 +1,4 @@
+apiVersion: codefresh.io/v1beta1
+kind: Product
+metadata:
+  name: test-product
