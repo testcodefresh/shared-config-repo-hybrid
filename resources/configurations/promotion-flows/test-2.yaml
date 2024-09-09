@@ -12,8 +12,10 @@ spec:
         - dev
       policy:
         postAction: prod-post-echo
+        action: none
     - environment: prod
       dependsOn:
         - integration
       policy:
         postAction: prod-post-echo
+        action: none
