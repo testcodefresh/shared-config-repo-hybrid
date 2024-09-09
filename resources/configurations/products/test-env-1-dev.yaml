@@ -11,3 +11,9 @@ spec:
           values:
             - promotion
             - promotion-test
+    - name: test
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - promotion
