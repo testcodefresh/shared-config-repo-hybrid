@@ -10,3 +10,4 @@ spec:
           operator: In
           values:
             - promotion
+            - promotion-test
