@@ -13,3 +13,4 @@ spec:
         - NON_PROD
   policy:
     action: commit
+    postAction: prod-post-echo
