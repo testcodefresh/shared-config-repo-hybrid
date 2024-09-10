@@ -9,8 +9,8 @@ spec:
       names:
         - test-env-1-dev
     targetEnvironment:
-      types:
-        - NON_PROD
+      names:
+        - dev
   policy:
     action: commit
     preAction: test-prom-wf
