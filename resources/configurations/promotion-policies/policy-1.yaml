@@ -1,0 +1,16 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionPolicy
+metadata:
+  name: policy-1
+spec:
+  priority: 1
+  selector:
+    product:
+      names:
+        - test-env-1-dev
+    targetEnvironment:
+      types:
+        - NON_PROD
+  policy:
+    action: none
+    postAction: prod-post-echo
