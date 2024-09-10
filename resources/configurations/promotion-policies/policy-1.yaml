@@ -12,4 +12,6 @@ spec:
       types:
         - NON_PROD
   policy:
-    action: none
+    action: commit
+    preAction: test-prom-wf
+    postAction: prod-post-echo
