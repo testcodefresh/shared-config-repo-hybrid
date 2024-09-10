@@ -13,4 +13,3 @@ spec:
         - NON_PROD
   policy:
     action: none
-    postAction: prod-post-echo
