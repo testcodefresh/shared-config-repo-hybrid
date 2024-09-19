@@ -10,6 +10,14 @@ spec:
     - environment: integration
       dependsOn:
         - dev
+      policy:
+        preAction: test
+        action: commit
+        postAction: test
     - environment: prod
       dependsOn:
         - integration
+      policy:
+        preAction: test
+        postAction: test-3
+        action: commit
