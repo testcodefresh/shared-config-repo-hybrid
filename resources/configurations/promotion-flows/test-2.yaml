@@ -13,9 +13,11 @@ spec:
       policy:
         postAction: prod-post-echo
         action: none
+        preAction: test-3
     - environment: prod
       dependsOn:
         - integration
       policy:
         postAction: prod-post-echo
         action: none
+        preAction: test
