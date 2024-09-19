@@ -7,15 +7,15 @@ metadata:
 spec:
   triggerEnvironment: dev
   steps:
-    - environment: integration
+    - environment: prod
       dependsOn:
+        - dev
         - dev
       policy:
         action: pr
-        preAction: test
-    - environment: prod
-      dependsOn:
-        - integration
-      policy:
-        action: pr
         postAction: prod-post-echo
+    - environment: integration
+      dependsOn:
+        - prod
+      policy:
+        preAction: test
