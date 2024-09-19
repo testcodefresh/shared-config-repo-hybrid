@@ -3,7 +3,7 @@ kind: PromotionFlow
 metadata:
   name: test
   annotations:
-    description: test without error
+    description: test
 spec:
   triggerEnvironment: dev
   steps:
@@ -14,8 +14,10 @@ spec:
       policy:
         action: pr
         postAction: prod-post-echo
+        preAction: test
     - environment: integration
       dependsOn:
         - prod
       policy:
         preAction: test
+        postAction: test
