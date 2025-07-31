@@ -15,6 +15,6 @@ gitops-runtime:
           - alina-hermes.rnd-sandbox.cf-infra.com
         protocol: https
       name: test-date
-      isConfigurationRuntime: true
+      isConfigurationRuntime: false
   installer:
     skipValidation: true
