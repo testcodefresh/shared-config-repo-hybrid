@@ -6,7 +6,7 @@ metadata:
     codefresh.io/entity: runtime
     codefresh.io/internal: 'true'
 spec:
-  project: default
+  project: cf-runtime-app-project
   source:
     repoURL: https://github.com/testcodefresh/shared-config-repo-hybrid.git
     targetRevision: HEAD
