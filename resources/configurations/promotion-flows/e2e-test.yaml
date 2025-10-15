@@ -1,0 +1,14 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionFlow
+metadata:
+  name: e2e-test
+  annotations:
+    description: ""
+spec:
+  triggerEnvironment: dev
+  steps:
+    - environment: integration
+      dependsOn:
+        - dev
+      policy:
+        action: commit
