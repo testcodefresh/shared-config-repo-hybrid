@@ -1,0 +1,25 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionFlow
+metadata:
+  name: e2e-test
+  annotations:
+    description: ""
+spec:
+  triggerEnvironment: env-1
+  steps:
+    - environment: env-2
+      dependsOn:
+        - env-1
+      policy:
+        preAction: pre-action
+        postAction: post-action
+    - environment: env-4
+      dependsOn:
+        - env-2
+      policy:
+        action: pr
+    - environment: env-6
+      dependsOn:
+        - env-4
+  hooks:
+    onStart: e2e
