@@ -1,9 +1,0 @@
-apiVersion: codefresh.io/v1beta1
-kind: PromotionPolicy
-metadata:
-  name: test
-spec:
-  priority: 1
-  selector: {}
-  policy:
-    action: commit
