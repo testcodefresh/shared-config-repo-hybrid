@@ -26,6 +26,12 @@ gitops-runtime:
           token: >-
             eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3NzYzNDYzMjUsImlhdCI6MTc3NjM0NjMyNSwianRpIjoiY2FkYjM5NjctNDNjYi00YTFhLThlZWItMzZkYzE3NWE1ZjMxIn0.mB7QhT7QNJhgQT6rY__LXkYgl9zr4JbEQ9-vCjoAmwM
           type: token
+        server:
+          svc: argocd-server
+          port: 80
+        repoServer:
+          svc: argocd-repo-server
+          port: 8081
     runtime:
       name: test-date
   installer:
