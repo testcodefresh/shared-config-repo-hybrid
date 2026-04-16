@@ -1,0 +1,32 @@
+gitops-runtime:
+  app-proxy:
+    config:
+      cors: https://g.codefresh.io
+  argo-cd:
+    enabled: false
+  argo-workflows:
+    controller:
+      workflowDefaults:
+        spec:
+          archiveLogs: true
+          artifactRepositoryRef:
+            configMap: codefresh-workflows-log-store
+            key: codefresh-workflows-log-store
+  global:
+    codefresh:
+      accountId: 61ee613ed0a01649469afba5
+      url: https://g.codefresh.io
+      userToken:
+        secretKeyRef:
+          name: codefresh-user-token
+          key: token
+    integrations:
+      argo-cd:
+        auth:
+          token: >-
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjphcGlLZXkiLCJuYmYiOjE3NzYzNDYzMjUsImlhdCI6MTc3NjM0NjMyNSwianRpIjoiY2FkYjM5NjctNDNjYi00YTFhLThlZWItMzZkYzE3NWE1ZjMxIn0.mB7QhT7QNJhgQT6rY__LXkYgl9zr4JbEQ9-vCjoAmwM
+          type: token
+    runtime:
+      name: test-date
+  installer:
+    skipValidation: true
